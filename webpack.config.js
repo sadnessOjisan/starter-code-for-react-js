@@ -1,7 +1,7 @@
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const path = require("path");
 
-const env = process.env.NODE_ENV;
+const env = process.env.BUILD_MODE;
 
 module.exports = {
   mode: env || "development",

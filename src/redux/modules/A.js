@@ -1,6 +1,6 @@
 // @flow
 
-import { Action } from "../../typedef/Action";
+import type { Action } from "../../typedef/Action";
 
 type State = {
   onLoad: boolean

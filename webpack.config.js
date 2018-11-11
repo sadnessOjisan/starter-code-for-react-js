@@ -1,14 +1,14 @@
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const path = require('path');
+const HtmlWebpackPlugin = require("html-webpack-plugin");
+const path = require("path");
 
 const env = process.env.NODE_ENV;
 
 module.exports = {
-  mode: env || 'development',
-  entry: './src/main.js',
+  mode: env || "development",
+  entry: "./src/main.js",
   output: {
-    path: path.resolve(__dirname, './dist'),
-    filename: 'build.js',
+    path: path.resolve(__dirname, "./dist"),
+    filename: "build.js"
   },
   module: {
     rules: [
@@ -16,23 +16,23 @@ module.exports = {
         test: /\.js$/,
         use: [
           {
-            loader: 'babel-loader',
-          },
-        ],
-      },
-    ],
+            loader: "babel-loader"
+          }
+        ]
+      }
+    ]
   },
   resolve: {
-    extensions: ['.js', '.json'],
+    extensions: [".js", ".json"]
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: './src/index.html',
-      filename: 'index.html',
-    }),
+      template: "./src/index.html",
+      filename: "index.html"
+    })
   ],
   devServer: {
-    contentBase: path.resolve(__dirname, 'dist'),
-    historyApiFallback: true,
-  },
+    contentBase: path.resolve(__dirname, "dist"),
+    historyApiFallback: true
+  }
 };

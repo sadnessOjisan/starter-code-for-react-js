@@ -15,6 +15,8 @@ if (currentEnv === env.prd) {
   HOST_URL = "https://dev.sample.com";
 } else if (currentEnv === env.local) {
   HOST_URL = "http://localhost:3001";
+}else{
+    HOST_URL = "http://localhost:3001";
 }
 
 export default HOST_URL;

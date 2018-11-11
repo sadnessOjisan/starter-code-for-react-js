@@ -7,9 +7,7 @@ class A extends Component {
   }
 
   render() {
-    return (
-        <Text>Aですううううううううううううううううううううう</Text>
-    );
+    return <Text>Aですううううううううううううううううううううう</Text>;
   }
 }
 

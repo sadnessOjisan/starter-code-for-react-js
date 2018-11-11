@@ -1,7 +1,7 @@
 // flow-typed signature: 2795c40d7224062bf0980781a3d4dad0
 // flow-typed version: 7f95efe47a/webpack_v4.x.x/flow_>=v0.71.x
 
-declare module 'webpack' {
+declare module "webpack" {
   declare class WebpackError extends Error {
     constructor(message: string): WebpackError;
     inspect(): string;
@@ -28,7 +28,7 @@ declare module 'webpack' {
   declare type NonEmptyArrayOfUniqueStringValues = Array<string>;
 
   declare type EntryObject = {
-    [k: string]: string | NonEmptyArrayOfUniqueStringValues,
+    [k: string]: string | NonEmptyArrayOfUniqueStringValues
   };
 
   declare type EntryItem = string | NonEmptyArrayOfUniqueStringValues;
@@ -47,10 +47,10 @@ declare module 'webpack' {
         [k: string]:
           | string
           | {
-              [k: string]: any,
+              [k: string]: any
             }
           | ArrayOfStringValues
-          | boolean,
+          | boolean
       }
     | RegExp;
 
@@ -81,7 +81,7 @@ declare module 'webpack' {
         include?: RuleSetConditionOrConditions,
         not?: RuleSetConditions,
         or?: RuleSetConditions,
-        test?: RuleSetConditionOrConditions,
+        test?: RuleSetConditionOrConditions
       };
 
   declare type RuleSetConditions = Array<RuleSetCondition>;
@@ -101,14 +101,14 @@ declare module 'webpack' {
         ident?: string,
         loader?: RuleSetLoader,
         options?: RuleSetQuery,
-        query?: RuleSetQuery,
+        query?: RuleSetQuery
       };
 
   declare type RuleSetUse = RuleSetUseItem | Function | Array<RuleSetUseItem>;
 
   declare type RuleSetRule = {
     compiler?: RuleSetConditionOrConditions,
-    enforce?: 'pre' | 'post',
+    enforce?: "pre" | "post",
     exclude?: RuleSetConditionOrConditions,
     include?: RuleSetConditionOrConditions,
     issuer?: RuleSetConditionOrConditions,
@@ -117,7 +117,7 @@ declare module 'webpack' {
     oneOf?: RuleSetRules,
     options?: RuleSetQuery,
     parser?: {
-      [k: string]: any,
+      [k: string]: any
     },
     query?: RuleSetQuery,
     resolve?: ResolveOptions,
@@ -127,12 +127,12 @@ declare module 'webpack' {
     sideEffects?: boolean,
     test?: RuleSetConditionOrConditions,
     type?:
-      | 'javascript/auto'
-      | 'javascript/dynamic'
-      | 'javascript/esm'
-      | 'json'
-      | 'webassembly/experimental',
-    use?: RuleSetUse,
+      | "javascript/auto"
+      | "javascript/dynamic"
+      | "javascript/esm"
+      | "json"
+      | "webassembly/experimental",
+    use?: RuleSetUse
   };
 
   declare type RuleSetRules = Array<RuleSetRule>;
@@ -154,24 +154,24 @@ declare module 'webpack' {
     unsafeCache?: boolean | Function,
     wrappedContextCritical?: boolean,
     wrappedContextRecursive?: boolean,
-    wrappedContextRegExp?: RegExp,
+    wrappedContextRegExp?: RegExp
   };
 
   declare type NodeOptions = {
-    Buffer?: false | true | 'mock',
-    __dirname?: false | true | 'mock',
-    __filename?: false | true | 'mock',
-    console?: false | true | 'mock',
+    Buffer?: false | true | "mock",
+    __dirname?: false | true | "mock",
+    __filename?: false | true | "mock",
+    console?: false | true | "mock",
     global?: boolean,
-    process?: false | true | 'mock',
-    [k: string]: false | true | 'mock' | 'empty',
+    process?: false | true | "mock",
+    [k: string]: false | true | "mock" | "empty"
   };
 
   declare type WebpackPluginFunction = (compiler: WebpackCompiler) => void;
 
   declare type WebpackPluginInstance = {
     apply: WebpackPluginFunction,
-    [k: string]: any,
+    [k: string]: any
   };
 
   declare type OptimizationSplitChunksOptions = {
@@ -185,7 +185,7 @@ declare module 'webpack' {
         | {
             automaticNameDelimiter?: string,
             automaticNamePrefix?: string,
-            chunks?: ('initial' | 'async' | 'all') | Function,
+            chunks?: ("initial" | "async" | "all") | Function,
             enforce?: boolean,
             filename?: string,
             maxAsyncRequests?: number,
@@ -196,14 +196,14 @@ declare module 'webpack' {
             name?: boolean | Function | string,
             priority?: number,
             reuseExistingChunk?: boolean,
-            test?: Function | string | RegExp,
-          },
+            test?: Function | string | RegExp
+          }
     },
-    chunks?: ('initial' | 'async' | 'all') | Function,
+    chunks?: ("initial" | "async" | "all") | Function,
     fallbackCacheGroup?: {
       automaticNameDelimiter?: string,
       maxSize?: number,
-      minSize?: number,
+      minSize?: number
     },
     filename?: string,
     hidePathInfo?: boolean,
@@ -212,12 +212,12 @@ declare module 'webpack' {
     maxSize?: number,
     minChunks?: number,
     minSize?: number,
-    name?: boolean | Function | string,
+    name?: boolean | Function | string
   };
 
   declare type OptimizationOptions = {
     checkWasmTypes?: boolean,
-    chunkIds?: 'natural' | 'named' | 'size' | 'total-size' | false,
+    chunkIds?: "natural" | "named" | "size" | "total-size" | false,
     concatenateModules?: boolean,
     flagIncludedChunks?: boolean,
     hashedModuleIds?: boolean,
@@ -225,7 +225,7 @@ declare module 'webpack' {
     mergeDuplicateChunks?: boolean,
     minimize?: boolean,
     minimizer?: Array<WebpackPluginInstance | WebpackPluginFunction>,
-    moduleIds?: 'natural' | 'named' | 'hashed' | 'size' | 'total-size' | false,
+    moduleIds?: "natural" | "named" | "hashed" | "size" | "total-size" | false,
     namedChunks?: boolean,
     namedModules?: boolean,
     noEmitOnErrors?: boolean,
@@ -237,19 +237,19 @@ declare module 'webpack' {
     removeEmptyChunks?: boolean,
     runtimeChunk?:
       | boolean
-      | ('single' | 'multiple')
+      | ("single" | "multiple")
       | {
-          name?: string | Function,
+          name?: string | Function
         },
     sideEffects?: boolean,
     splitChunks?: false | OptimizationSplitChunksOptions,
-    usedExports?: boolean,
+    usedExports?: boolean
   };
 
   declare type LibraryCustomUmdObject = {
     amd?: string,
     commonjs?: string,
-    root?: string | ArrayOfStringValues,
+    root?: string | ArrayOfStringValues
   };
 
   declare type OutputOptions = {
@@ -259,12 +259,12 @@ declare module 'webpack' {
           amd?: string,
           commonjs?: string,
           commonjs2?: string,
-          root?: string,
+          root?: string
         },
     chunkCallbackName?: string,
     chunkFilename?: string,
     chunkLoadTimeout?: number,
-    crossOriginLoading?: false | 'anonymous' | 'use-credentials',
+    crossOriginLoading?: false | "anonymous" | "use-credentials",
     devtoolFallbackModuleFilenameTemplate?: string | Function,
     devtoolLineToLine?: boolean | { [k: string]: any },
     devtoolModuleFilenameTemplate?: string | Function,
@@ -279,24 +279,24 @@ declare module 'webpack' {
     hotUpdateFunction?: string,
     hotUpdateMainFilename?: string | Function,
     jsonpFunction?: string,
-    jsonpScriptType?: false | 'text/javascript' | 'module',
+    jsonpScriptType?: false | "text/javascript" | "module",
     library?: string | Array<string> | LibraryCustomUmdObject,
     libraryExport?: string | ArrayOfStringValues,
     libraryTarget?:
-      | 'var'
-      | 'assign'
-      | 'this'
-      | 'window'
-      | 'self'
-      | 'global'
-      | 'commonjs'
-      | 'commonjs2'
-      | 'commonjs-module'
-      | 'amd'
-      | 'amd-require'
-      | 'umd'
-      | 'umd2'
-      | 'jsonp',
+      | "var"
+      | "assign"
+      | "this"
+      | "window"
+      | "self"
+      | "global"
+      | "commonjs"
+      | "commonjs2"
+      | "commonjs-module"
+      | "amd"
+      | "amd-require"
+      | "umd"
+      | "umd2"
+      | "jsonp",
     path?: string,
     pathinfo?: boolean,
     publicPath?: string | Function,
@@ -304,14 +304,14 @@ declare module 'webpack' {
     sourcePrefix?: string,
     strictModuleExceptionHandling?: boolean,
     umdNamedDefine?: boolean,
-    webassemblyModuleFilename?: string,
+    webassemblyModuleFilename?: string
   };
 
   declare type PerformanceOptions = {
     assetFilter?: Function,
-    hints?: false | 'warning' | 'error',
+    hints?: false | "warning" | "error",
     maxAssetSize?: number,
-    maxEntrypointSize?: number,
+    maxEntrypointSize?: number
   };
 
   declare type ArrayOfStringOrStringArrayValues = Array<string | Array<string>>;
@@ -322,7 +322,7 @@ declare module 'webpack' {
       | Array<{
           alias?: string,
           name?: string,
-          onlyModule?: boolean,
+          onlyModule?: boolean
         }>,
     aliasFields?: ArrayOfStringOrStringArrayValues,
     cachePredicate?: Function,
@@ -341,7 +341,7 @@ declare module 'webpack' {
     resolver?: { [k: string]: any },
     symlinks?: boolean,
     unsafeCache?: boolean | { [k: string]: any },
-    useSyncFileSystemCalls?: boolean,
+    useSyncFileSystemCalls?: boolean
   };
 
   declare type FilterItemTypes = RegExp | string | Function;
@@ -369,7 +369,7 @@ declare module 'webpack' {
           green?: string,
           magenta?: string,
           red?: string,
-          yellow?: string,
+          yellow?: string
         },
     context?: string,
     depth?: boolean,
@@ -398,7 +398,7 @@ declare module 'webpack' {
     usedExports?: boolean,
     version?: boolean,
     warnings?: boolean,
-    warningsFilter?: FilterTypes,
+    warningsFilter?: FilterTypes
   };
 
   declare type WebpackOptions = {
@@ -412,7 +412,7 @@ declare module 'webpack' {
     entry?: Entry,
     externals?: Externals,
     loader?: { [k: string]: any },
-    mode?: 'development' | 'production' | 'none',
+    mode?: "development" | "production" | "none",
     module?: ModuleOptions,
     name?: string,
     node?: false | NodeOptions,
@@ -432,29 +432,29 @@ declare module 'webpack' {
       | StatsOptions
       | boolean
       | (
-          | 'none'
-          | 'errors-only'
-          | 'minimal'
-          | 'normal'
-          | 'detailed'
-          | 'verbose'
+          | "none"
+          | "errors-only"
+          | "minimal"
+          | "normal"
+          | "detailed"
+          | "verbose"
         ),
     target?:
-      | 'web'
-      | 'webworker'
-      | 'node'
-      | 'async-node'
-      | 'node-webkit'
-      | 'electron-main'
-      | 'electron-renderer'
+      | "web"
+      | "webworker"
+      | "node"
+      | "async-node"
+      | "node-webkit"
+      | "electron-main"
+      | "electron-renderer"
       | ((compiler: WebpackCompiler) => void),
     watch?: boolean,
     watchOptions?: {
       aggregateTimeout?: number,
       ignored?: { [k: string]: any },
       poll?: boolean | number,
-      stdin?: boolean,
-    },
+      stdin?: boolean
+    }
   };
 
   declare module.exports: (

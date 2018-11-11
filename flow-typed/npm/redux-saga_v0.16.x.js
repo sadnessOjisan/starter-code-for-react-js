@@ -170,7 +170,16 @@ declare module "redux-saga" {
       T6,
       T7,
       T8,
-      Fn: (t1: T1, t2: T2, t3: T3, t4: T4, t5: T5, t6: T6, t7: T7, t8: T8) => Saga<R>
+      Fn: (
+        t1: T1,
+        t2: T2,
+        t3: T3,
+        t4: T4,
+        t5: T5,
+        t6: T6,
+        t7: T7,
+        t8: T8
+      ) => Saga<R>
     >(
       options: RunSagaOptions,
       saga: Fn,
@@ -273,7 +282,16 @@ declare module "redux-saga" {
         T6,
         T7,
         T8,
-        Fn: (t1: T1, t2: T2, t3: T3, t4: T4, t5: T5, t6: T6, t7: T7, t8: T8) => Saga<R>
+        Fn: (
+          t1: T1,
+          t2: T2,
+          t3: T3,
+          t4: T4,
+          t5: T5,
+          t6: T6,
+          t7: T7,
+          t8: T8
+        ) => Saga<R>
       >(
         saga: Fn,
         t1: T1,
@@ -297,7 +315,7 @@ declare module "redux-saga" {
     +onError?: (error: Error) => void
   }) => SagaMiddleware;
 
-  declare export default createSagaMiddleware
+  declare export default createSagaMiddleware;
 
   // Effect types
   declare export type PatternPart = string | (any => boolean);
@@ -376,7 +394,10 @@ declare module "redux-saga" {
     +CANCEL: T
   };
 
-  declare export type SelectEffect<Fn: Function | void, Args: $ReadOnlyArray<*>> = {
+  declare export type SelectEffect<
+    Fn: Function | void,
+    Args: $ReadOnlyArray<*>
+  > = {
     +"@@redux-saga/IO": true,
     +SELECT: {
       +selector: Fn,
@@ -483,7 +504,7 @@ declare module "redux-saga/effects" {
     <A: Object>(channel: Channel, action: A): PutEffect<A, Channel>,
     resolve: {
       <A: Object>(action: A): PutEffect<A, null>,
-      <A: Object>(channel: Channel, action: A): PutEffect<A, Channel>,
+      <A: Object>(channel: Channel, action: A): PutEffect<A, Channel>
     }
   };
 
@@ -1167,8 +1188,7 @@ declare module "redux-saga/effects" {
       T6,
       T7,
       T8,
-
-     Fn: (t1: T1, t2: T2, t3: T3, t4: T4, t5: T5, t6: T6, t7: T7, t8: T8) => R
+      Fn: (t1: T1, t2: T2, t3: T3, t4: T4, t5: T5, t6: T6, t7: T7, t8: T8) => R
     >(
       fn: Fn,
       t1: T1,
@@ -1353,7 +1373,7 @@ declare module "redux-saga/effects" {
       t4: T4,
       t5: T5,
       t6: T6,
-      t7: T7,
+      t7: T7
     ): SpawnEffect<null, Fn, [T1, T2, T3, T4, T5, T6, T7]>,
     <
       R,
@@ -1566,7 +1586,16 @@ declare module "redux-saga/effects" {
       T5,
       T6,
       T7,
-      Fn: (state: S, t1: T1, t2: T2, t3: T3, t4: T4, t5: T5, t6: T6, t7: T7) => R
+      Fn: (
+        state: S,
+        t1: T1,
+        t2: T2,
+        t3: T3,
+        t4: T4,
+        t5: T5,
+        t6: T6,
+        t7: T7
+      ) => R
     >(
       fn: Fn,
       t1: T1,
@@ -1588,7 +1617,17 @@ declare module "redux-saga/effects" {
       T6,
       T7,
       T8,
-      Fn: (state: S, t1: T1, t2: T2, t3: T3, t4: T4, t5: T5, t6: T6, t7: T7, t8: T8) => R
+      Fn: (
+        state: S,
+        t1: T1,
+        t2: T2,
+        t3: T3,
+        t4: T4,
+        t5: T5,
+        t6: T6,
+        t7: T7,
+        t8: T8
+      ) => R
     >(
       fn: Fn,
       t1: T1,
@@ -1722,7 +1761,16 @@ declare module "redux-saga/effects" {
       T5,
       T6,
       T7,
-      Fn: (t1: T1, t2: T2, t3: T3, t4: T4, t5: T5, t6: T6, t7: T7, action: A) => Saga<R>
+      Fn: (
+        t1: T1,
+        t2: T2,
+        t3: T3,
+        t4: T4,
+        t5: T5,
+        t6: T6,
+        t7: T7,
+        action: A
+      ) => Saga<R>
     >(
       pattern: Pattern,
       fn: Fn,
@@ -1745,7 +1793,17 @@ declare module "redux-saga/effects" {
       T6,
       T7,
       T8,
-      Fn: (t1: T1, t2: T2, t3: T3, t4: T4, t5: T5, t6: T6, t7: T7, t8: T8, action: A) => Saga<R>
+      Fn: (
+        t1: T1,
+        t2: T2,
+        t3: T3,
+        t4: T4,
+        t5: T5,
+        t6: T6,
+        t7: T7,
+        t8: T8,
+        action: A
+      ) => Saga<R>
     >(
       pattern: Pattern,
       fn: Fn,
@@ -1846,7 +1904,16 @@ declare module "redux-saga/effects" {
       T5,
       T6,
       T7,
-      Fn: (t1: T1, t2: T2, t3: T3, t4: T4, t5: T5, t6: T6, t7: T7, action: A) => Saga<R>
+      Fn: (
+        t1: T1,
+        t2: T2,
+        t3: T3,
+        t4: T4,
+        t5: T5,
+        t6: T6,
+        t7: T7,
+        action: A
+      ) => Saga<R>
     >(
       channel: Channel,
       fn: Fn,
@@ -1869,7 +1936,17 @@ declare module "redux-saga/effects" {
       T6,
       T7,
       T8,
-      Fn: (t1: T1, t2: T2, t3: T3, t4: T4, t5: T5, t6: T6, t7: T7, t8: T8, action: A) => Saga<R>
+      Fn: (
+        t1: T1,
+        t2: T2,
+        t3: T3,
+        t4: T4,
+        t5: T5,
+        t6: T6,
+        t7: T7,
+        t8: T8,
+        action: A
+      ) => Saga<R>
     >(
       channel: Channel,
       fn: Fn,
@@ -1972,7 +2049,16 @@ declare module "redux-saga/effects" {
       T5,
       T6,
       T7,
-      Fn: (t1: T1, t2: T2, t3: T3, t4: T4, t5: T5, t6: T6, t7: T7, action: A) => Saga<R>
+      Fn: (
+        t1: T1,
+        t2: T2,
+        t3: T3,
+        t4: T4,
+        t5: T5,
+        t6: T6,
+        t7: T7,
+        action: A
+      ) => Saga<R>
     >(
       pattern: Pattern,
       fn: Fn,
@@ -1995,7 +2081,17 @@ declare module "redux-saga/effects" {
       T6,
       T7,
       T8,
-      Fn: (t1: T1, t2: T2, t3: T3, t4: T4, t5: T5, t6: T6, t7: T7, t8: T8, action: A) => Saga<R>
+      Fn: (
+        t1: T1,
+        t2: T2,
+        t3: T3,
+        t4: T4,
+        t5: T5,
+        t6: T6,
+        t7: T7,
+        t8: T8,
+        action: A
+      ) => Saga<R>
     >(
       pattern: Pattern,
       fn: Fn,
@@ -2096,7 +2192,16 @@ declare module "redux-saga/effects" {
       T5,
       T6,
       T7,
-      Fn: (t1: T1, t2: T2, t3: T3, t4: T4, t5: T5, t6: T6, t7: T7, action: A) => Saga<R>
+      Fn: (
+        t1: T1,
+        t2: T2,
+        t3: T3,
+        t4: T4,
+        t5: T5,
+        t6: T6,
+        t7: T7,
+        action: A
+      ) => Saga<R>
     >(
       channel: Channel,
       fn: Fn,
@@ -2119,7 +2224,17 @@ declare module "redux-saga/effects" {
       T6,
       T7,
       T8,
-      Fn: (t1: T1, t2: T2, t3: T3, t4: T4, t5: T5, t6: T6, t7: T7, t8: T8, action: A) => Saga<R>
+      Fn: (
+        t1: T1,
+        t2: T2,
+        t3: T3,
+        t4: T4,
+        t5: T5,
+        t6: T6,
+        t7: T7,
+        t8: T8,
+        action: A
+      ) => Saga<R>
     >(
       channel: Channel,
       fn: Fn,
@@ -2222,7 +2337,16 @@ declare module "redux-saga/effects" {
       T5,
       T6,
       T7,
-      Fn: (t1: T1, t2: T2, t3: T3, t4: T4, t5: T5, t6: T6, t7: T7, action: A) => Saga<R>
+      Fn: (
+        t1: T1,
+        t2: T2,
+        t3: T3,
+        t4: T4,
+        t5: T5,
+        t6: T6,
+        t7: T7,
+        action: A
+      ) => Saga<R>
     >(
       pattern: Pattern,
       fn: Fn,
@@ -2245,7 +2369,17 @@ declare module "redux-saga/effects" {
       T6,
       T7,
       T8,
-      Fn: (t1: T1, t2: T2, t3: T3, t4: T4, t5: T5, t6: T6, t7: T7, t8: T8, action: A) => Saga<R>
+      Fn: (
+        t1: T1,
+        t2: T2,
+        t3: T3,
+        t4: T4,
+        t5: T5,
+        t6: T6,
+        t7: T7,
+        t8: T8,
+        action: A
+      ) => Saga<R>
     >(
       pattern: Pattern,
       fn: Fn,
@@ -2346,7 +2480,16 @@ declare module "redux-saga/effects" {
       T5,
       T6,
       T7,
-      Fn: (t1: T1, t2: T2, t3: T3, t4: T4, t5: T5, t6: T6, t7: T7, action: A) => Saga<R>
+      Fn: (
+        t1: T1,
+        t2: T2,
+        t3: T3,
+        t4: T4,
+        t5: T5,
+        t6: T6,
+        t7: T7,
+        action: A
+      ) => Saga<R>
     >(
       channel: Channel,
       fn: Fn,
@@ -2455,7 +2598,16 @@ declare module "redux-saga/effects" {
       T5,
       T6,
       T7,
-      Fn: (t1: T1, t2: T2, t3: T3, t4: T4, t5: T5, t6: T6, t7: T7, action: A) => Saga<R>
+      Fn: (
+        t1: T1,
+        t2: T2,
+        t3: T3,
+        t4: T4,
+        t5: T5,
+        t6: T6,
+        t7: T7,
+        action: A
+      ) => Saga<R>
     >(
       ms: number,
       pattern: Pattern,
@@ -2479,7 +2631,17 @@ declare module "redux-saga/effects" {
       T6,
       T7,
       T8,
-      Fn: (t1: T1, t2: T2, t3: T3, t4: T4, t5: T5, t6: T6, t7: T7, t8: T8, action: A) => Saga<R>
+      Fn: (
+        t1: T1,
+        t2: T2,
+        t3: T3,
+        t4: T4,
+        t5: T5,
+        t6: T6,
+        t7: T7,
+        t8: T8,
+        action: A
+      ) => Saga<R>
     >(
       ms: number,
       pattern: Pattern,

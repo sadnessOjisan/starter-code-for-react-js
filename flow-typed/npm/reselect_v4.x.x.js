@@ -4,16 +4,21 @@
 type ExtractReturnType = <Return>((...rest: any[]) => Return) => Return;
 
 declare module "reselect" {
-  declare type InputSelector<-TState, TProps, TResult> =
-    (state: TState, props: TProps, ...rest: any[]) => TResult
+  declare type InputSelector<-TState, TProps, TResult> = (
+    state: TState,
+    props: TProps,
+    ...rest: any[]
+  ) => TResult;
 
-  declare type OutputSelector<-TState, TProps, TResult> =
-    & InputSelector<TState, TProps, TResult>
-    & {
-      recomputations(): number,
-      resetRecomputations(): void,
-      resultFunc(state: TState, props: TProps, ...rest: Array<any>): TResult,
-    };
+  declare type OutputSelector<-TState, TProps, TResult> = InputSelector<
+    TState,
+    TProps,
+    TResult
+  > & {
+    recomputations(): number,
+    resetRecomputations(): void,
+    resultFunc(state: TState, props: TProps, ...rest: Array<any>): TResult
+  };
 
   declare type SelectorCreator = {
     <TState, TProps, TResult, T1>(
@@ -31,7 +36,10 @@ declare module "reselect" {
       resultFunc: (arg1: T1, arg2: T2) => TResult
     ): OutputSelector<TState, TProps, TResult>,
     <TState, TProps, TResult, T1, T2>(
-      selectors: [InputSelector<TState, TProps, T1>, InputSelector<TState, TProps, T2>],
+      selectors: [
+        InputSelector<TState, TProps, T1>,
+        InputSelector<TState, TProps, T2>
+      ],
       resultFunc: (arg1: T1, arg2: T2) => TResult
     ): OutputSelector<TState, TProps, TResult>,
 
@@ -885,10 +893,20 @@ declare module "reselect" {
       ...memoizeOptions: any[]
     ) => SelectorCreator,
 
-    createStructuredSelector: <TState, TProps, InputSelectors: {[k: string | number]: InputSelector<TState, TProps, any>}>(
+    createStructuredSelector: <
+      TState,
+      TProps,
+      InputSelectors: {
+        [k: string | number]: InputSelector<TState, TProps, any>
+      }
+    >(
       inputSelectors: InputSelectors,
       selectorCreator?: SelectorCreator
-    ) => OutputSelector<TState, TProps, $ObjMap<InputSelectors, ExtractReturnType>>
+    ) => OutputSelector<
+      TState,
+      TProps,
+      $ObjMap<InputSelectors, ExtractReturnType>
+    >
   };
 
   declare module.exports: Reselect;

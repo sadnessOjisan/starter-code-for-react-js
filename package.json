@@ -6,6 +6,7 @@
   "author": "sadness_ojisan <sadness.ojisan@gmail.com>",
   "license": "MIT",
   "dependencies": {
+    "prettier": "^1.15.2",
     "react": "^16.6.1",
     "react-dom": "^16.6.1",
     "styled-components": "^4.0.3"
@@ -23,6 +24,7 @@
   "scripts": {
     "build:local": "NODE_ENV='development' REACT_APP_ENV=local webpack",
     "build:prd": "NODE_ENV='production' REACT_APP_ENV='production' webpack",
-    "start:local": "REACT_APP_ENV=local webpack-dev-server"
+    "start:local": "REACT_APP_ENV=local webpack-dev-server", 
+    "format": "prettier --write '**/*.js'"
   }
 }

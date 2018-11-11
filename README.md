@@ -18,7 +18,26 @@ ReactをJSで開発するためのボイラープレート
 * reselect
 * redux
 * redux-saga
+* redux-logger
 * axios
 * flow
 * webpack
 * styled-components
+* react-router
+
+## 開発
+
+```
+# 起動
+$ yarn run start:local
+
+# テスト
+$ yarn run test
+
+# format
+$ yarn run format
+
+# lint
+$ yarn run lint
+```
+

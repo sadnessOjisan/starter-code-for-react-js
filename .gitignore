@@ -23,5 +23,5 @@ chrome-user-data
 *.swp
 *.swo
 .cache
-!.gitkeep
 dist/
+!.gitkeep

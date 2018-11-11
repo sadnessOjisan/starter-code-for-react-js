@@ -18,9 +18,11 @@ switch (env) {
     middlewares.push(sagaMiddleware);
     middlewares.push(logger);
     break;
+  case "staging":
+    middlewares.push(sagaMiddleware);
+    break;
   case "production":
     middlewares.push(sagaMiddleware);
-    middlewares.push(logger);
     break;
   default:
     middlewares.push(sagaMiddleware);

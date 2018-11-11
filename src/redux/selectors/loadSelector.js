@@ -1,10 +1,13 @@
-// @flow
-
 import { createSelector } from "reselect";
+import type { Selector, OutputSelector } from "reselect";
 
 const onLoadA = state => state.A.onLoad;
 
-export const loadASelector = createSelector(
+export const loadASelector: OutputSelector<
+  Selector,
+  boolean,
+  boolean
+> = createSelector(
   [onLoadA],
-  onLoad => (onLoad ? onLoad : onLoad)
+  (onLoad: boolean): Selector => (onLoad ? onLoad : onLoad)
 );

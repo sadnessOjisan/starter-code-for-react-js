@@ -1,6 +1,8 @@
 ボイラープレート
 ====
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/sadnessOjisan/boilerplate-react-js.svg)](https://greenkeeper.io/)
+
 ReactをJSで開発するためのボイラープレート
 
 ## 概要

@@ -1,5 +1,8 @@
 import React, { Component } from "react";
+import { Route, Switch } from "react-router-dom";
 import styled from "styled-components";
+import A from "./A";
+import B from "./B";
 
 class App extends Component {
   constructor(props) {
@@ -8,19 +11,12 @@ class App extends Component {
 
   render() {
     return (
-      <Wrapper>
-        <Text>hello world</Text>
-      </Wrapper>
+        <Switch>
+        <Route path="/" component={A} exact />
+        <Route path="/B" component={B} exact />
+      </Switch>
     );
   }
 }
-
-const Wrapper = styled.div`
-  text-align: center;
-`;
-
-const Text = styled.p`
-  color: red;
-`;
 
 export default App;

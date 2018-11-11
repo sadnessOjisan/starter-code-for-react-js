@@ -1,6 +1,6 @@
 import { compose, createStore, applyMiddleware } from "redux";
 import logger from "redux-logger";
-import rootReducer from "modules/index";
+import rootReducer from "./modules";
 
 const env = process.env.REACT_APP_ENV;
 const middlewares = [];

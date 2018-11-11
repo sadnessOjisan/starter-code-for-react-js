@@ -31,7 +31,7 @@
     "build:local": "NODE_ENV='development' REACT_APP_ENV=local webpack",
     "build:prd": "NODE_ENV='production' REACT_APP_ENV='production' webpack",
     "start:local": "REACT_APP_ENV=local webpack-dev-server",
-    "format": "prettier --write '**/*.js'", 
+    "format": "prettier --write '**/*.js'",
     "lint": "eslint --fix '**/*.js'"
   }
 }

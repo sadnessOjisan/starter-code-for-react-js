@@ -1,8 +1,8 @@
-const env = {
+const ENV = {
   prd: "production",
   stg: "staging",
   dev: "development",
   local: "local"
 };
 
-export default env;
+export default ENV;

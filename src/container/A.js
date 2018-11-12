@@ -3,6 +3,7 @@ import { bindActionCreators } from "redux";
 import { connect } from "react-redux";
 import styled from "styled-components";
 import { actions as aActions } from "../redux/modules/A";
+import COLOR from "../constants/COLOR";
 
 class A extends Component {
   constructor(props) {
@@ -31,7 +32,7 @@ const mapDispatchToProps = dispatch => {
 };
 
 const Text = styled.p`
-  color: red;
+  color: ${COLOR.danger};
 `;
 
 export default connect(

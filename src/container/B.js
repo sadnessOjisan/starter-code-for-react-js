@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import styled from "styled-components";
 import { loadASelector } from "../redux/selectors/loadSelector";
+import Text from "../components/common/atoms/Text";
 
 class B extends Component {
   constructor(props) {
@@ -12,10 +13,12 @@ class B extends Component {
     const { onLoadA } = this.props;
     return (
       <div>
-        <Text>Bですううううううううううううううううううううう</Text>
-        <Text>
+        <Text.Default>
+          Bですううううううううううううううううううううう
+        </Text.Default>
+        <Text.Default>
           ちなみにAは{onLoadA ? "LOADされてまーす" : "LOADされてませーん"}
-        </Text>
+        </Text.Default>
       </div>
     );
   }
@@ -24,10 +27,6 @@ class B extends Component {
 const mapStateToProps = state => ({
   onLoadA: loadASelector(state)
 });
-
-const Text = styled.p`
-  color: red;
-`;
 
 export default connect(
   mapStateToProps,

@@ -1,10 +1,10 @@
 // @flow
 
-import React, { Component } from "react";
+import * as React from "react";
 import styled from "styled-components";
 
 type Props = {
-  children: React.ReactNode,
+  children: React.Node,
   className?: string
 };
 

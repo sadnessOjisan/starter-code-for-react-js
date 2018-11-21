@@ -1,9 +1,11 @@
+// @flow
+
 import ENV from "./ENV";
 
-let HOST_URL;
+let HOST_URL: string;
 
-export let ROOT;
-export let REDIRECT_URI;
+export let ROOT: string;
+export let REDIRECT_URI: string;
 
 const currentEnv = process.env.REACT_APP_ENV;
 

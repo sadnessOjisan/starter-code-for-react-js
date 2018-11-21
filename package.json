@@ -67,6 +67,6 @@
     "transform": {}
   },
   "lint-staged": {
-    "/src/**/*.js": "yarn run format"
+    "*.js": "prettier --write '**/*.js'"
   }
 }

@@ -2,10 +2,10 @@
 
 import ENV from "./ENV";
 
-let HOST_URL:string;
+let HOST_URL: string;
 
-export let ROOT:string;
-export let REDIRECT_URI:string;
+export let ROOT: string;
+export let REDIRECT_URI: string;
 
 const currentEnv = process.env.REACT_APP_ENV;
 

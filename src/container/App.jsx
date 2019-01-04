@@ -1,13 +1,10 @@
 import React, { Component } from "react";
 import { Route, Switch } from "react-router-dom";
-import styled from "styled-components";
 import A from "./A";
 import B from "./B";
 
 class App extends Component {
-  constructor(props) {
-    super(props);
-  }
+  componentDidMount() {}
 
   render() {
     return (

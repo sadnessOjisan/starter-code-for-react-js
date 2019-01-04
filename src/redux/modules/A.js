@@ -2,18 +2,24 @@
 
 import type { Action } from "../../typedef/Action";
 
-type State = {
-  onLoad: boolean
-};
+const LOAD_PAGE = "A/LOAD_PAGE";
 
 export const types = {
-  LOAD_PAGE: "A/LOAD_PAGE"
+  LOAD_PAGE
 };
 
+export type LoadPageAction = {|
+  +type: typeof types.LOAD_PAGE
+|};
+
 export const actions = {
-  loadPage: (): Action => ({
+  loadPage: (): LoadPageAction => ({
     type: types.LOAD_PAGE
   })
+};
+
+export type State = {
+  onLoad: boolean
 };
 
 const initialState: State = {

@@ -1,15 +1,24 @@
+// @flow
+
 import React, { Component } from "react";
 import { bindActionCreators } from "redux";
 import { connect } from "react-redux";
 import styled from "styled-components";
 import { actions as aActions } from "../redux/modules/A";
+import { type State } from "../redux/modules/index";
 import COLOR from "../constants/COLOR";
 
-class A extends Component {
-  constructor(props) {
-    super(props);
-  }
+type StateProps = {|
+  +onLoad: boolean
+|};
 
+type DispatchProps = {|
+  +loadPage: typeof aActions.loadPage
+|};
+
+type Props = {| ...DispatchProps, ...StateProps |};
+
+class A extends Component<Props> {
   componentDidMount() {
     const { loadPage } = this.props;
     setTimeout(loadPage, 1000);
@@ -21,15 +30,13 @@ class A extends Component {
   }
 }
 
-const mapStateToProps = state => ({
+const mapStateToProps = (state: State): StateProps => ({
   onLoad: state.A.onLoad
 });
 
-const mapDispatchToProps = dispatch => {
-  return {
-    loadPage: bindActionCreators(aActions.loadPage, dispatch)
-  };
-};
+const mapDispatchToProps = dispatch => ({
+  loadPage: bindActionCreators(aActions.loadPage, dispatch)
+});
 
 const Text = styled.p`
   color: ${COLOR.danger};

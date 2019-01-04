@@ -13,7 +13,7 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.js$/,
+        test: /\.(js|jsx)$/,
         use: [
           {
             loader: "babel-loader"
@@ -23,7 +23,7 @@ module.exports = {
     ]
   },
   resolve: {
-    extensions: [".js", ".json"]
+    extensions: [".js", ".json", ".jsx"]
   },
   plugins: [
     new HtmlWebpackPlugin({

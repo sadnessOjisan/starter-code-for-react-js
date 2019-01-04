@@ -1,6 +1,7 @@
 {
+  "parser": "babel-eslint",
   "extends": ["airbnb", "prettier", "plugin:prettier/recommended"],
-  "plugins": ["prettier"],
+  "plugins": ["prettier", "flowtype"],
   "env": {
     "browser": true
   },
@@ -8,6 +9,15 @@
     "document": false
   },
   "rules": {
-    "prettier/prettier": "error"
+    "prettier/prettier": "error",
+    "import/no-named-as-default": 0,
+    "import/no-named-as-default-member": 0,
+    "import/no-extraneous-dependencies": [
+      "error",
+      {
+        "devDependencies": true,
+        "optionalDependencies": false
+      }
+    ]
   }
 }

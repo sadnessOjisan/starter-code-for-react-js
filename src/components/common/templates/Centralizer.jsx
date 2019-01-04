@@ -10,7 +10,11 @@ type Props = {
 
 const Centralizer = (props: Props) => {
   const { className, children } = props;
-  return <Wrapper>{children}</Wrapper>;
+  return <Wrapper className={className}>{children}</Wrapper>;
+};
+
+Centralizer.defaultProps = {
+  className: ""
 };
 
 export default Centralizer;

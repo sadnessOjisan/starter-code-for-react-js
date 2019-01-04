@@ -1,7 +1,7 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 import { Router } from "react-router";
-import createBrowserHistory from "history/createBrowserHistory";
+import createBrowserHistory from "history/createBrowserHistory"; // eslint-disable-line
 import { Provider } from "react-redux";
 import App from "./container/App";
 import configureStore from "./redux";

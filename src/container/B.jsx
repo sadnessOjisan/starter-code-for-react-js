@@ -1,13 +1,14 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import styled from "styled-components";
-import { loadASelector } from "../redux/selectors/loadSelector";
+import loadASelector from "../redux/selectors/loadSelector";
 import Text from "../components/common/atoms/Text";
 
-class B extends Component {
-  constructor(props) {
-    super(props);
-  }
+type Props = {
+  onLoadA: boolean
+};
+
+class B extends Component<Props> {
+  componentDidMount() {}
 
   render() {
     const { onLoadA } = this.props;
@@ -17,7 +18,8 @@ class B extends Component {
           Bですううううううううううううううううううううう
         </Text.Default>
         <Text.Default>
-          ちなみにAは{onLoadA ? "LOADされてまーす" : "LOADされてませーん"}
+          ちなみにAは
+          {onLoadA ? "LOADされてまーす" : "LOADされてませーん"}
         </Text.Default>
       </div>
     );

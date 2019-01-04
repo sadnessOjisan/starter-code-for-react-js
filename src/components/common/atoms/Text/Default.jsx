@@ -9,16 +9,23 @@ type Props = {
   className?: string
 };
 
-export default (props: Props) => {
+const Text = (props: Props) => {
   const { children, color, className } = props;
   return (
-    <DefaultTextStyle color={color} className={className || ""}>
+    <DefaultTextStyle color={color} className={className}>
       {children}
     </DefaultTextStyle>
   );
+};
+
+Text.defaultProps = {
+  color: "",
+  className: ""
 };
 
 const DefaultTextStyle = styled.span`
   font-size: 16px;
   color: ${props => (props.color ? props.color : null)};
 `;
+
+export default Text;

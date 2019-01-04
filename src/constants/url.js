@@ -1,24 +1,29 @@
 // @flow
 
-import ENV from "./ENV";
+import ENV from "./env";
 
-let HOST_URL: string;
-
-export let ROOT: string;
-export let REDIRECT_URI: string;
+let URL: string;
 
 const currentEnv = process.env.REACT_APP_ENV;
 
-if (currentEnv === ENV.prd) {
-  HOST_URL = "https://sample.com";
-} else if (currentEnv === ENV.stg) {
-  HOST_URL = "https://stg.sample.com";
-} else if (currentEnv === ENV.dev) {
-  HOST_URL = "https://dev.sample.com";
-} else if (currentEnv === ENV.local) {
-  HOST_URL = "http://localhost:3001";
-} else {
-  HOST_URL = "http://localhost:3001";
+switch (currentEnv) {
+  case ENV.prd:
+    URL = "https://sample.com";
+    break;
+  case ENV.stg:
+    URL = "https://sample.com";
+    break;
+  case ENV.dev:
+    URL = "https://sample.com";
+    break;
+  case ENV.local:
+    URL = "http://localhost:3001";
+    break;
+  default:
+    URL = "http://localhost:3001";
+    break;
 }
+
+const HOST_URL = URL;
 
 export default HOST_URL;

@@ -1,3 +1,5 @@
+// @flow
+
 import COLOR from "./PALLET";
 
 export default {

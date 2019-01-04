@@ -5,7 +5,7 @@ const env = process.env.BUILD_MODE;
 
 module.exports = {
   mode: env || "development",
-  entry: "./src/main.js",
+  entry: "./src/main.jsx",
   output: {
     path: path.resolve(__dirname, "./dist"),
     filename: "build.js"
@@ -13,7 +13,7 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.js$/,
+        test: /\.(js|jsx)$/,
         use: [
           {
             loader: "babel-loader"
@@ -23,7 +23,7 @@ module.exports = {
     ]
   },
   resolve: {
-    extensions: [".js", ".json"]
+    extensions: [".js", ".json", ".jsx"]
   },
   plugins: [
     new HtmlWebpackPlugin({

@@ -10,6 +10,7 @@
     "console": true
   },
   "rules": {
+    "no-console": "off",
     "prettier/prettier": "error",
     "import/no-named-as-default": 0,
     "import/no-named-as-default-member": 0,

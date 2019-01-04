@@ -1,3 +1,5 @@
+// @flow
+
 const ENV = {
   prd: "production",
   stg: "staging",

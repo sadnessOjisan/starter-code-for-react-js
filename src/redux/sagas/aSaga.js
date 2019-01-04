@@ -3,8 +3,8 @@ import { types, actions } from "../modules/A";
 import API from "../../services/sampleAPI";
 
 function* loadSaga(action) {
-  yield alert("fire saga");
   const { payload, error } = yield call(API.fetchSample, "test");
+  console.log("payload: ", payload);
   console.log("error: ", error);
 }
 

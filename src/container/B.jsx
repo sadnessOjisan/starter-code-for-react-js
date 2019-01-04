@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { loadASelector } from "../redux/selectors/loadSelector";
+import loadASelector from "../redux/selectors/loadSelector";
 import Text from "../components/common/atoms/Text";
 
 type Props = {

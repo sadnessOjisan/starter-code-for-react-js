@@ -1,13 +1,11 @@
 import { createSelector } from "reselect";
-import type { Selector, OutputSelector } from "reselect";
+import { type State } from "../modules";
 
-const onLoadA = state => state.A.onLoad;
+const onLoadA = (state: State) => state.A.onLoad;
 
-export const loadASelector: OutputSelector<
-  Selector,
-  boolean,
-  boolean
-> = createSelector(
+const loadASelector = createSelector(
   [onLoadA],
-  (onLoad: boolean): Selector => (onLoad ? onLoad : onLoad)
+  onLoad => onLoad
 );
+
+export default loadASelector;

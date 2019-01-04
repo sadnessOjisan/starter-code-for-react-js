@@ -1,7 +1,5 @@
 // @flow
 
-import type { Action } from "../../typedef/Action";
-
 const LOAD_PAGE = "A/LOAD_PAGE";
 
 export const types = {
@@ -11,6 +9,8 @@ export const types = {
 export type LoadPageAction = {|
   +type: typeof types.LOAD_PAGE
 |};
+
+type Action = LoadPageAction;
 
 export const actions = {
   loadPage: (): LoadPageAction => ({

@@ -1,12 +1,12 @@
 import axios from "axios";
-import { getURL } from "../helpers/urlHelper";
+import getURL from "../helpers/urlHelper";
 
 const sampleAPI = {
   fetchSample(test) {
     return axios
       .get(getURL("/api/v1/sample"), {
         params: {
-          test: test
+          test
         }
       })
       .then(response => ({

@@ -3,11 +3,11 @@
   "extends": ["airbnb", "prettier", "plugin:prettier/recommended"],
   "plugins": ["prettier", "flowtype", "jest"],
   "env": {
-    "browser": true,
-    "test": true
+    "browser": true
   },
   "globals": {
-    "document": false
+    "document": false,
+    "console": true
   },
   "rules": {
     "prettier/prettier": "error",

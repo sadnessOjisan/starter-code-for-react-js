@@ -58,7 +58,7 @@
     "start:dev": "BUILD_MODE='development' REACT_APP_ENV=development webpack-dev-server",
     "start:stg": "BUILD_MODE='production' REACT_APP_ENV='staging' webpack-dev-server",
     "start:prd": "BUILD_MODE='production' REACT_APP_ENV='production' webpack-dev-server",
-    "formatJS": "prettier --write './src/**/*.js'",
+    "formatJS": "prettier --write './src/**/*.js' --parser flow",
     "formatJSX": "prettier --write './src/**/*.jsx'",
     "lint": "eslint --fix 'src/**/*.js'",
     "flow-typed": "flow-typed",

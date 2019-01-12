@@ -1,6 +1,6 @@
 // @flow
 
 export default {
-  red: "red",
-  blue: "blue"
-};
+  red: 'red',
+  blue: 'blue',
+}

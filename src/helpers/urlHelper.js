@@ -1,7 +1,7 @@
 // @flow
 
-import HOST_URL from "../constants/url";
+import HOST_URL from '../constants/url'
 
-const getURL = (path: string): string => `${HOST_URL}${path}`;
+const getURL = (path: string): string => `${HOST_URL}${path}`
 
-export default getURL;
+export default getURL

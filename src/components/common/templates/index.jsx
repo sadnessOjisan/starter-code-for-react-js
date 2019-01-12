@@ -1,7 +1,7 @@
 // @flow
 
-import Centralizer from "./Centralizer";
+import Centralizer from './Centralizer'
 
 export default {
-  Centralizer
-};
+  Centralizer,
+}

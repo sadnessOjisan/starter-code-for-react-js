@@ -1,7 +1,7 @@
-import React, { Component } from "react";
-import { Route, Switch } from "react-router-dom";
-import A from "./A";
-import B from "./B";
+import React, { Component } from 'react'
+import { Route, Switch } from 'react-router-dom'
+import A from './A'
+import B from './B'
 
 class App extends Component {
   componentDidMount() {}
@@ -12,8 +12,8 @@ class App extends Component {
         <Route path="/" component={A} exact />
         <Route path="/B" component={B} exact />
       </Switch>
-    );
+    )
   }
 }
 
-export default App;
+export default App

@@ -1,9 +1,16 @@
-import { createSelector } from 'reselect'
-import { type State } from '../modules'
+// @flow
 
-const onLoadA = (state: State) => state.A.onLoad
+import {
+  createSelector,
+  type InputSelector,
+  type OutputSelector,
+} from 'reselect'
+import { type TState } from '../modules'
 
-const loadASelector = createSelector(
+const onLoadA: InputSelector<TState, mixed, boolean> = (state: TState) =>
+  state.A.onLoad
+
+const loadASelector: OutputSelector<TState, mixed, boolean> = createSelector(
   [onLoadA],
   onLoad => onLoad
 )

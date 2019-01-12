@@ -1,23 +1,23 @@
 // @flow
 
-import * as React from "react";
-import styled from "styled-components";
+import * as React from 'react'
+import styled from 'styled-components'
 
 type Props = {
   children: React.Node,
-  className?: string
-};
+  className?: string,
+}
 
 const Centralizer = (props: Props) => {
-  const { className, children } = props;
-  return <Wrapper className={className}>{children}</Wrapper>;
-};
+  const { className, children } = props
+  return <Wrapper className={className}>{children}</Wrapper>
+}
 
 Centralizer.defaultProps = {
-  className: ""
-};
+  className: '',
+}
 
-export default Centralizer;
+export default Centralizer
 
 const Wrapper = styled.div`
   width: 100%;
@@ -25,4 +25,4 @@ const Wrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-`;
+`

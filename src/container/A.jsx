@@ -34,9 +34,9 @@ const mapStateToProps = (state: TState): StateProps => ({
   onLoad: state.A.onLoad,
 })
 
-const mapDispatchToProps = dispatch => ({
-  loadPage: bindActionCreators(aActions.loadPage, dispatch),
-})
+const dispatchActions = {
+  loadPage: aActions.loadPage,
+}
 
 const Text = styled.p`
   color: ${COLOR.danger};
@@ -44,5 +44,5 @@ const Text = styled.p`
 
 export default connect(
   mapStateToProps,
-  mapDispatchToProps
+  dispatchActions
 )(A)

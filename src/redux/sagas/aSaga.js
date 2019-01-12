@@ -16,5 +16,6 @@ function* loadSaga(action) {
 }
 
 export default function* aSaga() {
+  // $FlowFixMe
   yield takeEvery(types.LOAD_PAGE, loadSaga)
 }

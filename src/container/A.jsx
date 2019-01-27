@@ -12,11 +12,11 @@ type StateProps = {|
   +onLoad: boolean,
 |}
 
-type DispatchProps = {
+type DispatchProps = {|
   +loadPage: typeof aActions.loadPage,
-}
+|}
 
-type Props = DispatchProps & StateProps
+type Props = $ReadOnly<{| ...DispatchProps, ...StateProps |}>
 
 class A extends Component<Props> {
   componentDidMount() {

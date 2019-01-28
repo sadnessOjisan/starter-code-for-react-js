@@ -32,6 +32,7 @@ class A extends Component<Props> {
 
 const mapStateToProps = (state: TState): StateProps => ({
   onLoad: state.A.onLoad,
+  hoge: 1,
 })
 
 const dispatchActions = {
